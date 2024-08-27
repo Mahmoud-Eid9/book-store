@@ -1,0 +1,7 @@
+@defer (when authorService.authorsView().length > 0) {
+     @for(author of authorService.authorsView(); track author.id){
+        <app-author-item [author]="author"></app-author-item>
+    }
+}@placeholder {
+    <h3>Loading...</h3>
+}

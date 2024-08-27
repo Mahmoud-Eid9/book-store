@@ -1,0 +1,15 @@
+<app-search></app-search>
+<div class="d-flex gap-5 mid-section-container m-auto">
+    <app-filter class=""></app-filter>
+    <div class="w-100 d-flex flex-column">
+        @defer{
+            <app-book-list class="w-100 mb-5"></app-book-list>
+        }@placeholder {
+            <h4>Loading...</h4>
+        }
+        <app-books-pagination
+        class="mt-5 d-flex"
+        ></app-books-pagination>
+    </div>
+    
+</div>

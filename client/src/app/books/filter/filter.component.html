@@ -1,0 +1,10 @@
+<ul id="filter-container" [ngClass]="{ 'active-class': isActive }">
+    <h3>Filter</h3>
+    @for(author of authors;track author.id){
+        <li class="d-flex align-items-baseline gap-2">
+            <input type="checkbox" [value]="author.id" (change)="addFilter($event)">
+            {{author.name}}
+        </li>
+    }
+</ul>
+<button class="btn btn-primary d-none filter-button mt-5" (click)="toggleClass()"><span class="bi bi-filter"></span> Filters</button>

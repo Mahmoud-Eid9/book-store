@@ -1,0 +1,28 @@
+
+.book-container{
+    background-color: #202020;
+    gap: 50px;
+}
+
+.book-container img{
+    max-width: 300px;
+    max-height: 460px;
+    margin:  20px;
+}
+
+.book-container div{
+    margin: 20px;
+    color: rgb(231, 231, 231);
+    max-width: 50%;
+}
+
+@media (max-width: 770px) {
+    .book-container{
+        flex-direction: column!important;
+        align-items: center;
+    }
+    .book-container div{
+        max-width: 100%
+    }
+
+}

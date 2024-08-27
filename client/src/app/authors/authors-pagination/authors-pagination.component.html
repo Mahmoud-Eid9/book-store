@@ -1,0 +1,10 @@
+<ul class="pagination d-flex m-auto" >
+    @for(page of pages; track page){
+        <li  class="btn"
+            
+            (click)="authorService.changePage(page)">
+            <span class="page-link">{{ page }}</span>
+        </li>
+    }
+</ul>
+

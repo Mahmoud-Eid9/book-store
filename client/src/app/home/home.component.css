@@ -1,0 +1,10 @@
+.mid-section-container{
+
+}
+@media (max-width: 770px){
+    .mid-section-container{
+        flex-direction: column!important;
+        gap: 0!important;
+
+    }
+}

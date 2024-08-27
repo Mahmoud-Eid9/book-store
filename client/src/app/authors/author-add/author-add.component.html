@@ -1,0 +1,30 @@
+<form (submit)="$event.preventDefault(); submitForm()" [formGroup]="addForm" class="container p-5">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" class="form-control" formControlName="senderName" />
+    @if(addForm.get('senderName')?.invalid && addForm.get('senderName')?.touched){
+        <div style="color: red;">
+            Please Enter a Valid name
+        </div>
+    }
+  </div>
+  <div class="mb-3">
+    <label class="form-label">E-mail</label>
+    <input type="text" class="form-control"  formControlName="senderEmail" />
+    @if(addForm.get('senderEmail')?.invalid && addForm.get('senderEmail')?.touched){
+        <div style="color: red;">
+            Please Enter a Valid Email
+        </div>
+    }
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Bio</label>
+    <input type="text" class="form-control" formControlName="senderBio"  />
+    @if(addForm.get('senderBio')?.invalid && addForm.get('senderBio')?.touched){
+        <div style="color: red;">
+            Please Enter a Valid Bio that is more than 10 characters
+        </div>
+    }
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Add</button>
+</form>

@@ -1,0 +1,17 @@
+<h2 class="mt-5 mb-3">Book Details</h2>
+<div class="d-flex book-container">
+    @defer {
+        <img [src]="bookService.singBook().image" alt="book-img">
+    }@placeholder {
+        <h5>Loading...</h5>
+    }
+    <div>
+        <label for="">Title</label>
+        <h4>{{bookService.singBook().title}}</h4>
+        <label for="" class="mt-4">Description</label>
+        <h5>{{bookService.singBook().description}}</h5>
+        <label for=""class="mt-4">Author</label>
+        <h4 >{{bookService.singBook().author}}</h4>
+    </div>
+    
+</div>
