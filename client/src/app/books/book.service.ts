@@ -3,12 +3,13 @@ import { computed, Injectable, signal } from '@angular/core';
 import { Book } from '../shared/models/Book';
 import { tap } from 'rxjs';
 import { AuthorService } from '../authors/author.service';
+import { Environment } from '../shared/environment.staging';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BookService {
-  private readonly apiUrl = 'http://localhost:8000/books';
+  private readonly apiUrl = Environment.apiUrl + '/books';
   private booksSignal = signal<Book[]>([]);
   readonly books = this.booksSignal.asReadonly();
   private booksViewSignal = signal<Book[]>([]);

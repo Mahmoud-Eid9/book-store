@@ -3,12 +3,13 @@ import { Author } from '../shared/models/Author';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs';
 import { Book } from '../shared/models/Book';
+import { Environment } from '../shared/environment.staging';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthorService {
-  private readonly apiUrl = 'http://localhost:8000/authors';
+  private readonly apiUrl = Environment.apiUrl + '/authors';
   private authorsSignal = signal<Author[]>([]);
   readonly authors = this.authorsSignal.asReadonly();
   private authorsViewSignal = signal<Author[]>([]);
