@@ -1,18 +1,18 @@
 <div
-  class="d-flex flex-column justify-content-between position-relative book "
-  (click)="bookClick()"
+  class="d-flex flex-column justify-content-between position-relative book bg-dark"
+  
 >
 <div class="d-flex align-items-baseline img-continaer">
-    <img [src]="book.image" alt="book-img" class="m-auto" />
+    <img [src]="book.image" alt="book-img" class="m-auto"  />
 </div>
-  <div class="text-container">
+  <div class="text-container" (click)="bookClick()">
     <h6 class="mb-2">{{ book.title }}</h6>
     @if(!showButtons){
     <p>{{ book.author }}</p>
     }
   </div>
   @if(showButtons){
-  <div id="btns-container" class="d-flex justify-content-between z-3">
+  <div id="btns-container" class="d-flex justify-content-between z-3 bg-dark">
     <button class="btn" (click)="editBook(book)" style="color: white;">Edit</button>
     <button class="btn" (click)="deleteBook(book)" style="color: rgb(255, 130, 130);">Delete</button>
   </div>

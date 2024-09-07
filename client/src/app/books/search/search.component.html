@@ -1,6 +1,6 @@
 <form (ngSubmit)="$event.preventDefault(); searchSubmit()" class="mt-5 search-form">
     <div class="d-flex justify-content-center gap-3">
-        <input type="search" name="search-query" [(ngModel)]="searchQuery" />
+        <input class="p-4" placeholder="Enter book name" type="search" name="search-query" [(ngModel)]="searchQuery" />
         <button type="submit" class="btn btn-primary">Search</button>
     </div>
  

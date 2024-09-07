@@ -1,29 +1,25 @@
 <div class="mt-5">
   <h1 class="mb-4">Author Details:</h1>
-  <div>
-    <Label>Name</Label>
-    <h3>{{ author()?.name }}</h3>
-  </div>
-<div>
-    <Label>E-mail</Label>
-    <h3>{{ author()?.email }}</h3>
 </div>
-<Label>Bio</Label>
-<h5>{{ author()?.bio }}</h5>
+<div class="bg-dark p-4 text-light author-det">
+  <Label>Name</Label>
+  <h3 >{{ author()?.name }}</h3>
 
+  <Label class="mt-4">E-mail</Label>
+  <h3>{{ author()?.email }}</h3>
 
+  <Label class="mt-4">Bio</Label>
+  <h5>{{ author()?.bio }}</h5>
+</div>
 
-<div class="mt-5">
+<div class="mt-5 mb-5">
   <div class="d-flex justify-content-between align-items-baseline">
     <h2 class="mb-4">Books by Author</h2>
     <button class="btn btn-primary" (click)="addBook()">Add Book</button>
   </div>
   <div id="book-list">
     @for(book of books(); track book.id){
-    <app-book-item
-      [showButtons]="true"
-      [book]="book"
-    ></app-book-item>
+    <app-book-item [showButtons]="true" [book]="book"></app-book-item>
     }
-    </div>
+  </div>
 </div>

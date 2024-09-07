@@ -1,8 +1,10 @@
 .search-form div input[type="search"]{
     height: 40px;
     width: 40%;
-    border-radius: 10px;
+    border-radius: 7px;
     outline: none;
+    border: none;
+    box-shadow: 0 0 10px 2px rgb(20, 20, 20, 0.1);
     padding-left: 10px;
     font-size: 18px;
     

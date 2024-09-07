@@ -6,6 +6,9 @@
     gap: 25px!important;
     
 }
+.author-det{
+    border-radius: 7px;
+}
 @media (max-width: 770px){
     #book-list{
         justify-content: center;
